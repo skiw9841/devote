@@ -1,0 +1,154 @@
+-dontusemixedcaseclassnames                 # 대소문자 섞인 클래스 이름 허용 않음
+-dontpreverify                              # 사전 검증기능을 사용하지 않음
+-dontshrink                                 # 사용하지 않는 메소드 유지 ( 사용 메서드가 난독화 되는 경우가 발생 )
+-dontoptimize                               # 압축(최적화) 하지 않음
+-ignorewarnings                             # 경고 무시
+-keepattributes SourceFile,LineNumberTable,InnerClasses  # 소스파일 줄정보 유지
+# dexguard 에 대한 난독화 옵션 ------------------
+-keep class org.w3c.** { *; }
+-renamesourcefileattribute DexGuard
+# ------------------ manifest 의 최소 필수 요소의 이름 난독화 제거 ------------------
+#-keepresourcexmlattributenames 'manifest/installLocation,manifest/versionCode,manifest/application/*/intent-filter/*/name'
+-keepattributes *Annotation*    # 앞뒤로 Annotation 이름을 갖는 속성 유지
+-keepattributes Signature       # Generic Type 속성 유지
+-keepattributes InnerClasses    # 내부 클래스 속성 유지
+# 네이티브 메소드를 포함하고 있는 클래스 및 멤버이름 유지
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+# 다음에 해당하는 onClick handler 를 가능한한 보존
+-keepclassmembers class * extends android.content.Context {
+    public void *(android.view.View);
+    public void *(android.view.MenuItem);
+}
+
+# 다음 클래스를 상속 받은 모든 클래스의 난독화 제거
+-keep public class * extends android.app.Activity
+-keep public class * extends android.app.Application
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+-keep public class * extends android.preference.Preference
+-keep public class * extends android.text.InputFilter
+-keep public class com.android.vending.licensing.ILicensingService
+-keep public class * extends android.app.Fragment {
+    <init>(...);
+}
+# v4 view 난독화 제거
+-keep public class * extends android.support.v4.** { *; }
+# v7 widget 난독화 제거
+-keep public class * extends android.support.v7.widget.** { *; }
+# Volley Request 를 상속받는 클래스 난독화 제거
+-keep public class * extends com.android.volley.Request
+-keep public class * extends android.support.v4.app.Fragment {
+    <init>(...);
+}
+-keep public class * extends android.view.View {
+        public <init>(android.content.Context);
+        public <init>(android.content.Context, android.util.AttributeSet);
+        public <init>(android.content.Context, android.util.AttributeSet, int);
+        public void set*(...);
+}
+# 다음 public static 으로 된 enum 유지
+-keepclassmembers enum  * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+-keep class com.tozny.crypto.android.*
+-keep class com.tozny.crypto.android.AesCbcWithIntegrity$PrngFixes$* { *; }
+-keep class * extends java.security.SecureRandomSpi
+# R class 의 모든 static 필드 유지
+-keepclassmembers class **.R$* {
+    public static <fields>;
+}
+# 다음 직렬화를 구현한 모든 클래스의 멤버에 대한 난독화 제거
+-keepclassmembers class * implements java.io.Serializable {
+        static final long serialVersionUID;
+        static final java.io.ObjectStreamField[] serialPersistentFields;
+        private void writeObject(java.io.ObjectOutputStream);
+        private void readObject(java.io.ObjectInputStream);
+        java.lang.Object writeReplace();
+        java.lang.Object readResolve();
+}
+
+
+-dontwarn android.support.v7.**
+-keep class android.support.v7.** { *; }
+-keep interface android.support.v7.** { *; }
+-dontwarn android.support.v4.**
+-keep class android.support.v4.** { *; }
+-keep interface android.support.v4.** { *; }
+# with this:
+# Allow obfuscation of android.support.v7.internal.view.menu.**
+# to avoid problem on Samsung 4.2.2 devices with appcompat v21
+# see https://code.google.com/p/android/issues/detail?id=78377
+-keep class !android.support.v7.internal.view.menu.**,android.support.** {*;}
+# play-services-gcm
+# com.google.android.gms:play-services-gcm:7.5.+
+-keep class * extends java.util.ListResourceBundle {
+    protected Object[][] getContents();
+}
+# Keep the names of classes/members we need for client functionality.
+-keepnames @com.google.android.gms.common.annotation.KeepName class *
+-keepclassmembernames class * {
+    @com.google.android.gms.common.annotation.KeepName *;
+}
+# AndroidAnnotation
+# org.androidannotations:androidannotations-api
+# gson
+-keep class com.google.gson.** { *; }
+-keep interface com.google.gson.** { *; }
+
+# Glide 난독화 제거
+# com.google.code.gson:gson:2.3.1
+-keep public class * implements com.bumptech.glide.module.GlideModule
+-keep public enum com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$** {
+    **[] $VALUES;
+    public *;
+}
+# EventBus
+# de.greenrobot:eventbus:2.4.0
+# https://github.com/greenrobot/EventBus/blob/master/HOWTO.md
+-keepclassmembers class ** {
+    public void onEvent*(**);
+}
+# Only required if you use AsyncExecutor
+-keepclassmembers class * extends de.greenrobot.event.util.ThrowableFailureEvent {
+    <init>(java.lang.Throwable);
+}
+#FCM 밑 TMS 라이브러리 난독화 제거
+-keep class com.google.firebase.** { *; }
+
+# android version m
+-keep class org.apache.http.** { *; }
+-dontwarn org.apache.http.**
+-keep class android.net.http.** { *; }
+-dontwarn android.net.http.**
+-keep class com.google.android.gms.** { *; }
+-dontwarn com.google.android.gms.**
+-keepclasseswithmembers class * {
+    void onClick*(...);
+}
+-keepclasseswithmembers class * {
+    *** *Callback(...);
+}
+# library don't warning
+-dontwarn com.google.gson.**
+-dontwarn okhttp3.**
+-dontwarn retrofit2.**
+
+
+-dontwarn android.support.**
+# ------------------ Log 제거 ------------------
+-assumenosideeffects class android.util.Log {
+    public static boolean isLoggable(java.lang.String, int);
+    public static int v(...);
+    public static int i(...);
+    public static int w(...);
+    public static int d(...);
+    public static int e(...);
+    public static java.lang.String getStackTraceString(java.lang.Throwable);
+}
+# resource & file name obfuscate
+-adaptresourcefilenames **.properties,**.xml,**.png,**.jpg,**.gif

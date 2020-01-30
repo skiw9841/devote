@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:Tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_white">
+
+    <!-- Content Start -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="40dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:paddingTop="40dp">
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingBottom="24dp"
+                android:textColor="@color/block"
+                android:textSize="18sp"
+                Tools:text="접수 종료" />
+
+            <TextView
+                android:id="@+id/textViewMessage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:textColor="@color/dialog_color_negative"
+                android:textSize="16sp"
+                Tools:text="선착순, 투표 접수가 종료 되었습니다.\n아쉽지만, 다음 기회에 참여해주세요." />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonConfirm"
+            style="@style/Button.Stype01"
+            android:text="@string/confirm"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Content End -->
+
+</RelativeLayout>

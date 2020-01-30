@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.ad4th.devote.widget.CustomToolbar
+            android:id="@+id/customToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:bgColor="@color/transparent"
+            app:title="@string/notice"
+            app:titleColor="@color/block"
+            app:type="@integer/custom_toolbar_title_right" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey" />
+    </LinearLayout>
+
+
+    <com.ad4th.devote.base.BaseWebView
+        android:id="@+id/baseWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layoutBottom"
+        android:layout_below="@+id/layoutHeader" />
+
+    <LinearLayout
+        android:id="@+id/layoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonNotView"
+            style="@style/Button.Stype01"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="0.25dp"
+            android:layout_weight="1"
+            android:text="@string/not_view" />
+
+        <Button
+            android:id="@+id/buttonConfirm"
+            style="@style/Button.Stype01"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="0.25dp"
+            android:layout_weight="1"
+            android:text="@string/confirm" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

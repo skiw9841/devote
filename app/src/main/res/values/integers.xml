@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!--커스덤 툴바 속성 -->
+    <integer name="custom_toolbar_left">1</integer>
+    <integer name="custom_toolbar_left_title">2</integer>
+    <integer name="custom_toolbar_left_title_right">3</integer>
+    <integer name="custom_toolbar_title_right">4</integer>
+    <integer name="custom_toolbar_right">5</integer>
+    <integer name="custom_toolbar_title">6</integer>
+</resources>

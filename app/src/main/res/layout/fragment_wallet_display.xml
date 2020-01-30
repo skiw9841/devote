@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/intro_bg">
+
+
+    <!-- Content Start -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layoutBottom"
+        android:gravity="center_horizontal"
+        android:paddingTop="80dp">
+
+
+        <TextView
+            android:id="@+id/textViewWalletInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/wallet_create_comment"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/textViewWalletInfo"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="30dp"
+            android:paddingLeft="100dp"
+            android:paddingRight="100dp"
+            android:paddingTop="30dp"
+            android:src="@drawable/img_wallet" />
+
+
+    </RelativeLayout>
+
+    <!-- Content End -->
+
+
+    <LinearLayout
+
+        android:id="@+id/layoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/buttonTestWalletCreate"
+            style="@style/Button.Stype01"
+            android:text="@string/wallet_create_ing" />
+
+        <LinearLayout
+
+            android:id="@+id/layoutMainBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="35dp"
+            android:paddingLeft="34dp"
+            android:paddingRight="34dp">
+
+            <Button
+                android:id="@+id/buttonWalletCreate"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:background="@drawable/round_bora"
+                android:text="@string/wallet_create_ing"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/buttonWalletRegedit"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/round_bora_dark"
+                android:text="@string/wallet_join"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+
+

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "892087220126",
+    "firebase_url": "https://com-ad4th-devote.firebaseio.com",
+    "project_id": "com-ad4th-devote",
+    "storage_bucket": "com-ad4th-devote.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:892087220126:android:d32553ff11541ed1",
+        "android_client_info": {
+          "package_name": "com.ad4th.devote"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "892087220126-4eumuore08bfn8jjnpt4ajm1vg674v12.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4Wuqd8O03P2JAlulSEMoxjmzjzO3UINY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

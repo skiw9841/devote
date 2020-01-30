@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/intro_bg">
+
+    <com.ad4th.devote.widget.CustomToolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bgColor="@color/transparent"
+        app:leftImgTint="@color/white"
+        app:title="@string/wallet_address_reg"
+        app:titleColor="@color/white"
+        app:type="@integer/custom_toolbar_left_title" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layoutInfo"
+        android:layout_below="@+id/customToolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:maxHeight="192dp"
+        android:maxWidth="192dp"
+        android:paddingBottom="48dp"
+        android:paddingTop="48dp"
+        android:src="@drawable/img_wallet" />
+
+    <LinearLayout
+        android:id="@+id/layoutInfo"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_above="@id/buttonJoin"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/wallet_address_reg"
+            android:textColor="@color/block_2b"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="31dp"
+            android:text="@string/wallet_address_input"
+            android:textSize="16sp" />
+
+        <EditText
+            android:theme="@style/EditTextTheme"
+            android:id="@+id/editTextAddress"
+            android:layout_width="match_parent"
+            android:layout_height="77dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/border_grey"
+            android:gravity="top"
+            android:hint="@string/wallet_address_input_hint"
+            android:padding="11dp" />
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/buttonJoin"
+        style="@style/Button.Stype01"
+        android:layout_alignParentBottom="true"
+        android:text="@string/wallet_reg" />
+
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,319 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.ad4th.devote.widget.CustomToolbar
+        android:id="@+id/customToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bgColor="@color/transparent"
+        app:title="@string/wallet_regedit"
+        app:titleColor="@color/block"
+        app:type="@integer/custom_toolbar_title_right" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/buttonReg"
+        android:layout_below="@id/customToolbar"
+        android:layout_marginTop="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/buttonReg"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="105dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/wallet_step_2"
+                    android:textColor="@color/grey" />
+
+                <TextView
+                    android:layout_width="105dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/wallet_step_3"
+                    android:textColor="@color/bora" />
+
+                <TextView
+                    android:layout_width="105dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/wallet_step_4"
+                    android:textColor="@color/grey" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="14dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="1dp" />
+
+                <RelativeLayout
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical">
+
+                    <View
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/circle_bora" />
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="80dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/grey1" />
+
+                <RelativeLayout
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/circle_edge_bora">
+
+                    <View
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/circle_grey" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="80dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/grey1" />
+
+                <RelativeLayout
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical">
+
+                    <View
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/circle_grey" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="1dp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="33dp"
+                android:paddingRight="33dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/wallet_create_successed_comment"
+                    android:textColor="@color/grey2"
+                    android:textSize="14sp" />
+
+
+                <!-- Address Start -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/wallet_address"
+                        android:textColor="@color/grey2"
+                        android:textSize="16sp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/wallet_address_comment"
+                        android:textColor="@color/bora"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/wallet_address_info"
+                        android:textSize="12sp" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/border_grey">
+
+                        <TextView
+                            android:id="@+id/textViewAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:gravity="center_vertical"
+                            android:paddingBottom="15dp"
+                            android:paddingLeft="12dp"
+                            android:paddingRight="12dp"
+                            android:paddingTop="15dp"
+                            android:textSize="12sp" />
+
+
+                        <!--<ImageButton-->
+                        <!--android:id="@+id/imageButtonAddressCopy"-->
+                        <!--android:layout_width="26dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:background="@null"-->
+                        <!--android:paddingRight="12dp"-->
+                        <!--android:src="@drawable/ic_clip_address" />-->
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+                <!-- Address End -->
+
+                <!-- private Start -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17dp"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/wallet_private"
+                        android:textColor="@color/grey2"
+                        android:textSize="16sp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/wallet_private_comment"
+                        android:textColor="@color/bora"
+                        android:textSize="12sp" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/border_grey">
+
+                        <TextView
+                            android:id="@+id/textViewPrivateKey"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:gravity="center_vertical"
+                            android:paddingBottom="12dp"
+                            android:paddingLeft="12dp"
+                            android:paddingRight="16dp"
+                            android:paddingTop="12dp"
+                            android:textSize="12sp" />
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="39dp"
+                        android:background="@drawable/border_grey_top_not">
+
+                        <ImageView
+                            android:layout_width="19dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="12dp"
+                            android:background="@null"
+                            android:src="@drawable/ic_clip_private_key" />
+
+
+                        <Button
+                            android:id="@+id/buttonPrivateCopy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="45dp"
+                            android:text="@string/wallet_private_key_save"
+                            android:textAllCaps="false"
+                            android:textColor="@color/bora"
+                            android:textSize="16sp" />
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+                <!-- private End -->
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="27dp"
+                android:paddingLeft="33dp"
+                android:paddingRight="33dp"
+                android:paddingTop="30dp"
+                android:text="@string/wallet_private_comment_2" />
+        </LinearLayout>
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/buttonReg"
+        style="@style/Button.Stype01"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:text="@string/wallet_reg" />
+
+</RelativeLayout>

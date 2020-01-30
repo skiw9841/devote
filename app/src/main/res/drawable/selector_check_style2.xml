@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="false">
+        <bitmap android:src="@drawable/ic_check_off" android:tint="#e3e3e3" />
+    </item>
+    <item android:drawable="@drawable/ic_check_on2" android:state_checked="true" />
+    <item>
+        <bitmap android:src="@drawable/ic_check_off" android:tint="#e3e3e3"  />
+    </item>
+</selector>

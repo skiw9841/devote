@@ -1,0 +1,204 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <com.ad4th.devote.widget.CustomToolbar
+        android:id="@+id/customToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bgColor="@color/transparent"
+        app:title="@string/wallet_regedit"
+        app:titleColor="@color/block"
+        app:type="@integer/custom_toolbar_title_right" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/buttonNext"
+        android:layout_below="@+id/customToolbar"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="105dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/wallet_step_2"
+                android:textColor="@color/bora" />
+
+            <TextView
+                android:layout_width="105dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/wallet_step_3"
+                android:textColor="@color/grey" />
+
+            <TextView
+                android:layout_width="105dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/wallet_step_4"
+                android:textColor="@color/grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="1dp" />
+
+            <RelativeLayout
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/circle_edge_bora">
+
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="6dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/circle_grey" />
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="80dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/grey1" />
+
+            <RelativeLayout
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical">
+
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="6dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/circle_grey" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="80dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/grey1" />
+
+            <RelativeLayout
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical">
+
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="6dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/circle_grey" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="1dp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="33dp"
+            android:paddingRight="33dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/wallet_signUp_comment"
+                android:textColor="@color/grey2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="@string/wallet_signUp_password"
+                android:textColor="@color/grey2"
+                android:textSize="16sp" />
+
+
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:gravity="top"
+                android:hint="@string/wallet_password_fommat"
+                android:inputType="textPassword"
+                android:textSize="16sp"
+                android:theme="@style/EditTextTheme" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/wallet_signUp_password_re"
+                android:textColor="@color/grey2"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editTextPasswordConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:gravity="top"
+                android:hint="@string/wallet_signUp_password_re"
+                android:inputType="textPassword"
+                android:textSize="16sp"
+                android:theme="@style/EditTextTheme" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textViewTestNet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonNext"
+        android:layout_marginBottom="30dp"
+        android:gravity="center_horizontal"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:text="@string/net_test_info_wallet"
+        android:textColor="@color/orange"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/buttonNext"
+        style="@style/Button.Stype01"
+        android:layout_alignParentBottom="true"
+        android:text="@string/step_next" />
+
+
+</RelativeLayout>

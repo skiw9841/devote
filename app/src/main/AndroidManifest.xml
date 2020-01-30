@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ad4th.devote">
+
+    <meta-data
+        android:name="firebase_crashlytics_collection_enabled"
+        android:value="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- {QR CODE SCAN} -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".application.DevoteApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.IntroActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 퍼미션 안내 -->
+        <activity
+            android:name=".activity.PermissionInfoActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <!-- 튜토리얼 안내 -->
+        <activity
+            android:name=".activity.TutorialActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.Translucent"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <!-- 메인 -->
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <!-- 마이페이지 -->
+        <activity
+            android:name=".activity.MyActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <!-- 지갑등록 및 생성 -->
+        <activity
+            android:name=".activity.WalletActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <!-- 투표하기 -->
+        <activity
+            android:name=".activity.VotingActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <!-- 투표하기- 최종결정 -->
+        <activity
+            android:name=".activity.VotingDecideActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+
+        <!-- 지갑등록완료 -->
+        <activity
+            android:name=".activity.WalletRegeditFinishActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <!-- 공지안내 팝업 -->
+        <activity
+            android:name=".activity.NoticeActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <!-- menu -->
+        <activity
+            android:name=".activity.MenuActivity"
+            android:launchMode="standard"
+            android:theme="@style/Transparent"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <!-- version -->
+        <activity android:name=".activity.VersionActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+
+        <!-- personal protection -->
+        <activity android:name=".activity.ProtectionActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+
+
+        <!-- FCM Start -->
+        <service android:name=".fcm.FirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".fcm.FirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- FCM End -->
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/devote_logo" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/white" />
+
+
+    </application>
+
+</manifest>

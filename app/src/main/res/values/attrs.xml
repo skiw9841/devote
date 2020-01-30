@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomToolbar">
+        <attr name="type" format="integer" />
+        <attr name="bgColor" format="integer" />
+        <attr name="titleColor" format="integer" />
+        <attr name="leftImg" format="integer" />
+        <attr name="leftImgTint" format="integer" />
+        <attr name="rightImg" format="integer" />
+        <attr name="rightImgTint" format="integer" />
+        <attr name="title" format="string" localization="suggested"/>
+    </declare-styleable>
+</resources>

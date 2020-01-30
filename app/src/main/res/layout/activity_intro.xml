@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/block">
+
+
+    <!-- ICON INTRO 시작 -->
+    <RelativeLayout
+        android:id="@+id/layoutIcon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dialog_bg_white"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="223dp"
+            android:src="@drawable/img_icon_white" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="22dp"
+            android:lineSpacingExtra="19sp"
+            android:text="@string/icon_copyright"
+            android:textColor="@color/block"
+            android:textSize="11sp" />
+    </RelativeLayout>
+    <!-- ICON INTRO 종료 -->
+
+    <!-- AD4th INTRO 시작 -->
+    <RelativeLayout
+        android:id="@+id/layoutAd4th"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/intro_bg"
+        android:gravity="center_horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="223dp"
+            android:src="@drawable/ad_4_th" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="22dp"
+            android:lineSpacingExtra="19sp"
+            android:text="@string/ad4th_copyright"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+    </RelativeLayout>
+    <!-- AD4th INTRO 종료 -->
+
+
+</RelativeLayout>
